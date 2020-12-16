@@ -21,15 +21,17 @@ void swap(int *a,int *b) {
 }
 
 void max_heapify(int arr[],int start, int end) {
+    // 创建父节点 子节点
     int dad = start;
     int son = dad * 2 + 1;
-    while (son <= end) {
+    while (son <= end) { // 如果子节点在指标范围内才做比较
         if (son + 1 <= end && arr[son] < arr[son+1]) {
+            // 先比较两个子节点的大小 选择最大的
             son++;
         }
-        if (arr[dad] > arr[son]) {
+        if (arr[dad] > arr[son]) { //如果父节点大于子节点，代表调整完成 直接跳出函数
             return;
-        }else {
+        }else { // 交换父子节点的 继续子节点和孙节点的比较
             swap(&arr[dad], &arr[son]);
             dad = son;
             son = dad*2 + 1;

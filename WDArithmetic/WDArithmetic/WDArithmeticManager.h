@@ -10,8 +10,12 @@
 
 #include <stdio.h>
 
-void quickSort();
+void quickSort(void);
 
-void bubblingSort();
+void bubblingSort(void);
+
+void selectSort (void);
+
+void insertSort (void);
 
 #endif /* WDArithmeticManager_h */

@@ -20,8 +20,9 @@
     
 //    quickSort();
 //    bubblingSort();
-    selectSort();
+//    selectSort();
 //    insertSort();
+    maxHeapifySort();
 }
 
 

@@ -22,4 +22,6 @@ void maxHeapifySort(void);
 
 void updateArray (void);
 
+void canThreePartsEqualSum (void);
+
 #endif /* WDArithmeticManager_h */

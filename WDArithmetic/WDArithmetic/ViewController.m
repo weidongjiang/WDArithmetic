@@ -23,7 +23,8 @@
 //    selectSort();
 //    insertSort();
 //    maxHeapifySort();
-    updateArray();
+//    updateArray();
+    canThreePartsEqualSum();
 }
 
 

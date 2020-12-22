@@ -20,6 +20,78 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------
+// 给你一个整数数组 A，只有可以将其划分为三个和相等的非空部分时才返回 true，否则返回 false。
+// [0,2,1,-6,6,-7,9,1,2,0,1]  --> 0+2+1=-6+6-7+9+1=2+0+1   ture
+// [0,2,1,-6,6,7,9,-1,2,0,1]    false
+// [3,3,6,5,-2,2,5,1,-9,4]  ----> 3+3=6=5-2+2+5+1-9+4   ture
+int isCanThreePartsEqualSum(int a[],int aSize) {
+    
+    if (aSize <=0 ) {
+        return 0;
+    }
+    int sum = 0;
+    
+    for (int i = 0; i < aSize; i++) {// 求和
+        sum += a[i];
+    }
+    
+    if (sum %3 == 0) {// 可以三等分
+        int s1 = 0,s2 = 0;
+        for (int j=0; j<aSize; j++) {
+            s1 += a[j];
+            
+            if (s1 == sum/3) {//第一部分
+                for (int k = j+1; k < aSize - 1; k++) {
+                    s2 += a[k];
+                    if (s2 == sum/3) {
+                        return 1;
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+
+
+void canThreePartsEqualSum (void){
+//    int a[] = {0,2,1,-6,6,-7,9,1,2,0,1};
+//    int a[] = {0,2,1,-6,6,7,9,-1,2,0,1};
+    int a[] = {3,3,6,5,-2,2,5,1,-9,4};
+
+    int aSize = sizeof(a)/sizeof(a[0]);
+    
+    int isCan = isCanThreePartsEqualSum(a, aSize);
+    printf("isCanThreePartsEqualSum---%d",isCan);
+}
+
+
+
+
 //-----------------------------------------------------------------------
 // [1,2,3,4,5,6,7,8,9]  [7,8,9,1,2,3,4,5,6]
 
@@ -65,23 +137,6 @@ void updateArray (void) {
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

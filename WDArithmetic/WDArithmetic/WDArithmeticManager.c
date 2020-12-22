@@ -13,6 +13,81 @@
 
 
 
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------
+// [1,2,3,4,5,6,7,8,9]  [7,8,9,1,2,3,4,5,6]
+
+/// 逆序数组
+/// @param array 需要操作的数组
+/// @param array_length 数组的长度
+/// @param index 进行求逆序的其实位置
+/// @param length 进行求逆序的元素个数（包括其实位置的那个）
+void reversetargetArray(int array[],int array_length,int index,int length) {
+    
+    if (index < 0 || length > array_length || index + length > array_length) {
+        return;
+    }
+    
+    int first = index;
+    int end = length + first - 1;
+    while (first < end) {
+        int temp = 0;
+        temp = array[first];
+        array[first] = array[end];
+        array[end] = temp;
+        first++;
+        end--;
+    }
+}
+
+
+void updateArray (void) {
+    
+    int k = 6;
+    int a[] = {1,2,3,4,5,6,7,8,9};
+    int array_length = sizeof(a)/sizeof(a[0]);
+    printf("原始数据：\n");
+    for (int i = 0; i < array_length; i++) {
+        printf("%d-",a[i]);
+    }
+    reversetargetArray(a, array_length,0, k);// 数组前k 逆序
+    reversetargetArray(a, array_length,k, array_length-k); //数组从第k位开始 逆序array_length-k 个数
+    reversetargetArray(a, array_length,0, array_length);// 整个数组逆序
+    printf("\n转化后的：\n");
+    for (int i = 0; i < array_length; i++) {
+        printf("%d-",a[i]);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //-----------------------------------------------------------------------
 //最大堆排序
 void swap(int *a,int *b) {

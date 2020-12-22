@@ -20,4 +20,6 @@ void insertSort (void);
 
 void maxHeapifySort(void);
 
+void updateArray (void);
+
 #endif /* WDArithmeticManager_h */

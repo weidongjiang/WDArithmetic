@@ -22,7 +22,8 @@
 //    bubblingSort();
 //    selectSort();
 //    insertSort();
-    maxHeapifySort();
+//    maxHeapifySort();
+    updateArray();
 }
 
 

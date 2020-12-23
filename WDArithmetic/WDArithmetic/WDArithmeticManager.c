@@ -22,59 +22,62 @@
 // [1,3,0,1,2,1,2,2,4,0,0,1,3]  1->3->2->2->4->3 刚好到结尾 true
 // [1,3,0,1,2,1,2,2,4,0,0,1]  1->3->2->2->4-> 走不通 则走小于步数 1->3->1->1->1-> 走不到结尾 false
 
+int isCanjump(int a[],int index,int aSize) {
+    
+    int m = a[index];
+    printf("%d",m);
+    if (m == 0) {
+        return 0;
+    }
+    index = index + m;
+    
+    int value = a[index];
+    printf("%d",value);
+    if (index + 1 == aSize) {
+        return 1;
+    }else if (index + 1 > aSize){
+        return 0;
+    }else {
+        m = value + index;
+    }
+    
+    int isC = isCanjump(a, m,aSize);
+    
+    return isC;
+}
+
+
+int canJump(int a[], int aSize) {
+    
+    if (aSize == 1) {
+        return 1;
+    }
+    if (a[0] == 0) {
+        return 0;
+    }
+    
+    int isC = isCanjump(a, 0,aSize);
+//    if (isC == 0) {
+//        m--;
+//        printf("\n");
+//        isCanjump(a, m,aSize);
+//    }
+    
+    return isC;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-//void main() {
-//char a[81],b[81],s[81];
-//int n,flag;
-//scanf("%s",s);
-//sprintf(a,"%80s",s);
-//scanf("%s",s);
-//sprintf(b,"%80s",s);
-//for(flag=0,n=79; n>=0; n--, flag/=10)
-//s[n]=(flag=z(a[n])+z(b[n])+flag)%10;
-//for(s[80]=flag=n=0; n<80; n++)
-//if(flag || s[n]) {
-//s[n]+='0';
-//flag=1;
-//} else s[n]=' ';
-//printf("%s\n",s);
-//}
-
-
-//int add() {
-//    
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void arrayCanJump(void) {
+    
+//    int a[] = {1,3,0,1,2,1,2,2,4,0,0,1,3};
+    int a[] = {1,3,0,1,2,1,2,2,4,0,0,1};
+    int aSize = sizeof(a)/sizeof(a[0]);
+    int iscan = canJump(a, aSize);
+    printf("\niscan---%d",iscan);
+}
 
 
 

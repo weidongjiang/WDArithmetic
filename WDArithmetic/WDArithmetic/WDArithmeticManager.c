@@ -26,7 +26,7 @@ int isCanjump(int a[],int index,int aSize) {
     
     int m = a[index];
     printf("%d",m);
-    if (m == 0) {
+    if (m <= 0) {
         return 0;
     }
     index = index + m;
@@ -42,7 +42,11 @@ int isCanjump(int a[],int index,int aSize) {
     }
     
     int isC = isCanjump(a, m,aSize);
-    
+    if (isC == 0) {
+        m--;
+        printf("\n");
+        isCanjump(a, m,aSize);
+    }
     return isC;
 }
 
@@ -57,11 +61,7 @@ int canJump(int a[], int aSize) {
     }
     
     int isC = isCanjump(a, 0,aSize);
-//    if (isC == 0) {
-//        m--;
-//        printf("\n");
-//        isCanjump(a, m,aSize);
-//    }
+
     
     return isC;
 }

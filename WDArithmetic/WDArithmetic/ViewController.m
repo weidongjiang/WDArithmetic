@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "WDArithmeticManager.h"
+#import "WDArithmeticOCManager.h"
 
 @interface ViewController ()
 
@@ -24,7 +25,12 @@
 //    insertSort();
 //    maxHeapifySort();
 //    updateArray();
-    canThreePartsEqualSum();
+//    canThreePartsEqualSum();
+    
+    
+    
+    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
+    [oc addLongString];
 }
 
 

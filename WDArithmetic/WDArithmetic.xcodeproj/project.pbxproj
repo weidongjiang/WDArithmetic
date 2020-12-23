@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C5618F62593318E0078C638 /* WDArithmeticOCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */; };
 		4C5DE1F42589FAC8003D783B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE1F32589FAC8003D783B /* AppDelegate.m */; };
 		4C5DE1F72589FAC8003D783B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE1F62589FAC8003D783B /* SceneDelegate.m */; };
 		4C5DE1FA2589FAC8003D783B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE1F92589FAC8003D783B /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C5618F42593318E0078C638 /* WDArithmeticOCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDArithmeticOCManager.h; sourceTree = "<group>"; };
+		4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDArithmeticOCManager.m; sourceTree = "<group>"; };
 		4C5DE1EF2589FAC8003D783B /* WDArithmetic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDArithmetic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5DE1F22589FAC8003D783B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C5DE1F32589FAC8003D783B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				4C5DE1F92589FAC8003D783B /* ViewController.m */,
 				4C5DE22A2589FB03003D783B /* WDArithmeticManager.h */,
 				4C5DE22B2589FB03003D783B /* WDArithmeticManager.c */,
+				4C5618F42593318E0078C638 /* WDArithmeticOCManager.h */,
+				4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */,
 				4C5DE1FB2589FAC9003D783B /* Main.storyboard */,
 				4C5DE1FE2589FACB003D783B /* Assets.xcassets */,
 				4C5DE2002589FACB003D783B /* LaunchScreen.storyboard */,
@@ -275,6 +280,7 @@
 				4C5DE1F42589FAC8003D783B /* AppDelegate.m in Sources */,
 				4C5DE22C2589FB03003D783B /* WDArithmeticManager.c in Sources */,
 				4C5DE2052589FACB003D783B /* main.m in Sources */,
+				4C5618F62593318E0078C638 /* WDArithmeticOCManager.m in Sources */,
 				4C5DE1F72589FAC8003D783B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

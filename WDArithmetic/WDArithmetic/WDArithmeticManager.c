@@ -21,7 +21,6 @@
 // 给你一个整数数组A，可以按照里面具体的值来走位（可以走小于等于当前值的步），判断其是否正好到数组结尾
 // [1,3,0,1,2,1,2,2,4,0,0,1,3]  1->3->2->2->4->3 刚好到结尾 true
 // [1,3,0,1,2,1,2,2,4,0,0,1]  1->3->2->2->4-> 走不通 则走小于步数 1->3->1->1->1-> 走不到结尾 false
-
 int isCanjump(int a[],int index,int aSize) {
     
     int m = a[index];
@@ -42,7 +41,7 @@ int isCanjump(int a[],int index,int aSize) {
     }
     
     int isC = isCanjump(a, m,aSize);
-    if (isC == 0) {
+    if (isC == 0) {// 走不通则走小于步数
         m--;
         printf("\n");
         isCanjump(a, m,aSize);
@@ -52,23 +51,15 @@ int isCanjump(int a[],int index,int aSize) {
 
 
 int canJump(int a[], int aSize) {
-    
     if (aSize == 1) {
         return 1;
     }
     if (a[0] == 0) {
         return 0;
     }
-    
     int isC = isCanjump(a, 0,aSize);
-
-    
     return isC;
 }
-
-
-
-
 
 void arrayCanJump(void) {
     
@@ -78,43 +69,6 @@ void arrayCanJump(void) {
     int iscan = canJump(a, aSize);
     printf("\niscan---%d",iscan);
 }
-
-
-
-
-
-//bool canJump(vector A) {         // write you code here
-//    if(A.size()==1) return true;
-//    if(A[0]==0) return false;
-//    int m=A[0];
-//    for(int i=0;im) return false;
-//    if(i+A[i]>m)
-//        m=i+A[i];
-//    if(m>=A.size()-1)
-//        return true;
-//
-//}     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

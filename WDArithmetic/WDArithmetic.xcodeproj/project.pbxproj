@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4C5618F62593318E0078C638 /* WDArithmeticOCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */; };
+		4C5619182595E90E0078C638 /* WDArithmeticLinklistManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C5619172595E90D0078C638 /* WDArithmeticLinklistManager.c */; };
+		4C5619202595EDBD0078C638 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56191F2595EDBD0078C638 /* ViewController.m */; };
 		4C5DE1F42589FAC8003D783B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE1F32589FAC8003D783B /* AppDelegate.m */; };
 		4C5DE1F72589FAC8003D783B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE1F62589FAC8003D783B /* SceneDelegate.m */; };
-		4C5DE1FA2589FAC8003D783B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE1F92589FAC8003D783B /* ViewController.m */; };
 		4C5DE1FD2589FAC9003D783B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5DE1FB2589FAC9003D783B /* Main.storyboard */; };
 		4C5DE1FF2589FACB003D783B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C5DE1FE2589FACB003D783B /* Assets.xcassets */; };
 		4C5DE2022589FACB003D783B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5DE2002589FACB003D783B /* LaunchScreen.storyboard */; };
@@ -40,13 +41,15 @@
 /* Begin PBXFileReference section */
 		4C5618F42593318E0078C638 /* WDArithmeticOCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDArithmeticOCManager.h; sourceTree = "<group>"; };
 		4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDArithmeticOCManager.m; sourceTree = "<group>"; };
+		4C5619162595E90D0078C638 /* WDArithmeticLinklistManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDArithmeticLinklistManager.h; sourceTree = "<group>"; };
+		4C5619172595E90D0078C638 /* WDArithmeticLinklistManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = WDArithmeticLinklistManager.c; sourceTree = "<group>"; };
+		4C56191F2595EDBD0078C638 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4C5DE1EF2589FAC8003D783B /* WDArithmetic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDArithmetic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5DE1F22589FAC8003D783B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4C5DE1F32589FAC8003D783B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4C5DE1F52589FAC8003D783B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		4C5DE1F62589FAC8003D783B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		4C5DE1F82589FAC8003D783B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4C5DE1F92589FAC8003D783B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4C5DE1FC2589FAC9003D783B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C5DE1FE2589FACB003D783B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C5DE2012589FACB003D783B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,11 +118,13 @@
 				4C5DE1F52589FAC8003D783B /* SceneDelegate.h */,
 				4C5DE1F62589FAC8003D783B /* SceneDelegate.m */,
 				4C5DE1F82589FAC8003D783B /* ViewController.h */,
-				4C5DE1F92589FAC8003D783B /* ViewController.m */,
+				4C56191F2595EDBD0078C638 /* ViewController.m */,
 				4C5DE22A2589FB03003D783B /* WDArithmeticManager.h */,
 				4C5DE22B2589FB03003D783B /* WDArithmeticManager.c */,
 				4C5618F42593318E0078C638 /* WDArithmeticOCManager.h */,
 				4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */,
+				4C5619162595E90D0078C638 /* WDArithmeticLinklistManager.h */,
+				4C5619172595E90D0078C638 /* WDArithmeticLinklistManager.c */,
 				4C5DE1FB2589FAC9003D783B /* Main.storyboard */,
 				4C5DE1FE2589FACB003D783B /* Assets.xcassets */,
 				4C5DE2002589FACB003D783B /* LaunchScreen.storyboard */,
@@ -276,11 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C5DE1FA2589FAC8003D783B /* ViewController.m in Sources */,
 				4C5DE1F42589FAC8003D783B /* AppDelegate.m in Sources */,
+				4C5619202595EDBD0078C638 /* ViewController.m in Sources */,
 				4C5DE22C2589FB03003D783B /* WDArithmeticManager.c in Sources */,
 				4C5DE2052589FACB003D783B /* main.m in Sources */,
 				4C5618F62593318E0078C638 /* WDArithmeticOCManager.m in Sources */,
+				4C5619182595E90E0078C638 /* WDArithmeticLinklistManager.c in Sources */,
 				4C5DE1F72589FAC8003D783B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

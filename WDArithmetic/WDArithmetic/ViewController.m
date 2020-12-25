@@ -8,7 +8,7 @@
 #import "ViewController.h"
 #import "WDArithmeticManager.h"
 #import "WDArithmeticOCManager.h"
-
+#import "WDArithmeticLinklistManager.h"
 @interface ViewController ()
 
 @end
@@ -26,8 +26,9 @@
 //    maxHeapifySort();
 //    updateArray();
 //    canThreePartsEqualSum();
-    arrayCanJump();
+//    arrayCanJump();
     
+    deleteLinkDuplication();
     
 //    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
 //    [oc addLongString];

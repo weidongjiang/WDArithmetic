@@ -22,4 +22,8 @@ void sListReverse(void);
 //合并两个有序链表,合并后依然有序
 void slistMerge(void);
 
+//查找单链表的中间节点，要求只能遍历一次链表 
+void sListFindMidNode(void);
+
+
 #endif /* WDArithmeticLinklistManager_h */

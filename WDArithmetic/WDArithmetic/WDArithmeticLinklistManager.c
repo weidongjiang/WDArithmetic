@@ -42,6 +42,7 @@ link * cureatLink() {
     link *link_4 = link_init();
     link *link_5 = link_init();
     link *link_6 = link_init();
+    link *link_7 = link_init();
 
     
     link *link_0 = link_init();
@@ -73,6 +74,10 @@ link * cureatLink() {
     link_6->val = 7;
     link_6->next = NULL;
     printf("%d-",link_6->val);
+    
+    link_7->val = 8;
+    link_7->next = NULL;
+    printf("%d-",link_7->val);
     
     printf("\n");
     
@@ -122,6 +127,33 @@ link * cureatLink1() {
     
     return link_0;
 }
+
+
+//-----------------------------------------------------------------------
+//查找单链表的中间节点，要求只能遍历一次链表
+//利用快慢指针 当快指针走到表尾部的时候 慢指针的当前位置就是中间节点
+link* _sListFindMidNode(link *list) {
+    link *cur = NULL;
+    link *fast = NULL;
+    cur = fast = list;
+    while (fast && fast->next) {
+        cur = cur->next;
+        fast = fast->next->next;
+        printf("cur%d，",cur->val);
+        printf("fast%d，",fast->val);
+    }
+    return cur;
+}
+
+void sListFindMidNode(void) {
+    link *node = _sListFindMidNode(cureatLink());
+    printf("\n");
+    printf("%d",node->val);
+}
+
+
+
+
 
 
 //-----------------------------------------------------------------------

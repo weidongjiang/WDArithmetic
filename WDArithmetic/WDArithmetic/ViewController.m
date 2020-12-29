@@ -31,7 +31,8 @@
 //    deleteLinkDuplication();
 //    sListPrintTailToHead();
 //    sListReverse();
-    slistMerge();
+//    slistMerge();
+    sListFindMidNode();
     
     
     

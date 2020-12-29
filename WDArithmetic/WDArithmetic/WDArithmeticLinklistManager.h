@@ -12,4 +12,6 @@
 
 void deleteLinkDuplication(void);
 
+void sListPrintTailToHead(void);
+
 #endif /* WDArithmeticLinklistManager_h */

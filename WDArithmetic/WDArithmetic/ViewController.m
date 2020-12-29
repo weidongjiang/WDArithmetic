@@ -28,8 +28,8 @@
 //    canThreePartsEqualSum();
 //    arrayCanJump();
     
-    deleteLinkDuplication();
-    
+//    deleteLinkDuplication();
+    sListPrintTailToHead();
 //    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
 //    [oc addLongString];
 }

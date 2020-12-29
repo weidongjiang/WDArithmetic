@@ -132,6 +132,31 @@ link * cureatLink1() {
 
 
 //-----------------------------------------------------------------------
+// 求环列表的长度
+int _sListCycleLen(link *node) {
+    int n = 1;
+    link *cur = node;
+    while (cur->next != node) {
+        ++n;
+        cur = cur->next;
+    }
+    return n;
+}
+
+void sListCycleLen(void) {
+    int len = _sListCycleLen(cureatLink());
+    printf("\n");
+    printf("len %d",len);
+}
+
+
+
+
+
+
+
+
+//-----------------------------------------------------------------------
 //判断是否带环  快慢指针  多次循环，只要是带环的链表总有快慢指针相等的时候
 link *_sListIsCrcle(link *list) {
     link *cur = NULL;

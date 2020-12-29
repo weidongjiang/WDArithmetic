@@ -34,4 +34,7 @@ void sListFindPop(void);
 //判断是否带环  快慢指针
 void sListIsCrcle(void);
 
+// 求环列表的长度
+void sListCycleLen(void);
+
 #endif /* WDArithmeticLinklistManager_h */

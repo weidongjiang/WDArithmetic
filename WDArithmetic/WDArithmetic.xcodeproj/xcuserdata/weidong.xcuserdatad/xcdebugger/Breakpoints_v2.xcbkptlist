@@ -30,8 +30,8 @@
             filePath = "WDArithmetic/WDArithmeticLinklistManager.c"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
+            startingLineNumber = "422"
+            endingLineNumber = "422"
             landmarkName = "_sListReverse(list)"
             landmarkType = "9">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "WDArithmetic/WDArithmeticLinklistManager.c"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "_sListIsCrcle(list)"
             landmarkType = "9">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "WDArithmetic/WDArithmeticLinklistManager.c"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "_sListIsCrcle(list)"
             landmarkType = "9">
          </BreakpointContent>

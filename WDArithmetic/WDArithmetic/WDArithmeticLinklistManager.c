@@ -36,9 +36,15 @@ void printLink(link *node) {
     }
 }
 
+
+link * cureat_link_1(void) {
+    link *link_1 = link_init();
+    return link_1;
+}
+
 link * cureatLink() {
     link *link_0 = link_init();
-    link *link_1 = link_init();
+    link *link_1 = cureat_link_1();
     link *link_2 = link_init();
     link *link_3 = link_init();
     link *link_4 = link_init();
@@ -86,7 +92,8 @@ link * cureatLink() {
 }
 
 link * cureatLink1() {
-    link *link_1 = link_init();
+    link *link_0 = link_init();
+    link *link_1 = cureat_link_1();
     link *link_2 = link_init();
     link *link_3 = link_init();
     link *link_4 = link_init();
@@ -94,7 +101,6 @@ link * cureatLink1() {
     link *link_6 = link_init();
 
     
-    link *link_0 = link_init();
     
     link_0->val = 2;
     link_0->next = link_1;
@@ -121,13 +127,93 @@ link * cureatLink1() {
     printf("%d-",link_5->val);
     
     link_6->val = 20;
-    link_6->next = NULL;
+    link_6->next = link_0;
     printf("%d-",link_6->val);
     
     printf("\n");
     
     return link_0;
 }
+
+//-----------------------------------------------------------------------
+//求环的入口点（环的入口点就是一个从链表开始另一个从相遇点开，当他们相交的点就是入口点）
+link* _sListCrossEntreNode(link* list, link* meetNode) {
+    while (list != meetNode) {
+        list = list->next;
+        meetNode = meetNode->next;
+    }
+    
+    return list;
+}
+
+
+
+void sListCrossEntreNode (void) {
+    
+    link *link_0 = link_init();
+    link *link_1 = link_init();
+    link *link_2 = link_init();
+    link *link_3 = link_init();
+    link *link_4 = link_init();
+    link *link_5 = link_init();
+    link *link_6 = link_init();
+    link *link_7 = link_init();
+
+    link_0->val = 1;
+    link_0->next = link_1;
+    printf("%d-",link_0->val);
+    
+    link_1->val = 2;
+    link_1->next = link_2;
+    printf("%d-",link_1->val);
+    
+    link_2->val = 3;
+    link_2->next = link_3;
+    printf("%d-",link_2->val);
+    
+    link_3->val = 4;
+    link_3->next = link_4;
+    printf("%d-",link_3->val);
+    
+    link_4->val = 5;
+    link_4->next = link_5;
+    printf("%d-",link_4->val);
+    
+    link_5->val = 6;
+    link_5->next = link_6;
+    printf("%d-",link_5->val);
+    
+    link_6->val = 7;
+    link_6->next = link_7;
+    printf("%d-",link_6->val);
+    
+    link_7->val = 8;
+    link_7->next = link_0;
+    printf("%d-",link_7->val);
+    
+    
+    link *link_0_0 = link_init();
+    link_0_0->next = link_2;
+    link_0_0->val = 100;
+    
+    
+    
+    link *node = _sListCrossEntreNode(link_0, link_0_0);
+    printLink(node);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

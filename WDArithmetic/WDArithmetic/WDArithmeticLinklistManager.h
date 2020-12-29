@@ -37,4 +37,7 @@ void sListIsCrcle(void);
 // 求环列表的长度
 void sListCycleLen(void);
 
+//求环的入口点（环的入口点就是一个从链表开始另一个从相遇点开，当他们相交的点就是入口点）
+void sListCrossEntreNode (void);
+
 #endif /* WDArithmeticLinklistManager_h */

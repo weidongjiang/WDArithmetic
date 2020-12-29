@@ -58,7 +58,7 @@ link * cureatLink() {
     link_0->next = link_1;
     printf("%d-",link_0->val);
     
-    link_1->val = 2;
+    link_1->val = 4;
     link_1->next = link_2;
     printf("%d-",link_1->val);
     
@@ -83,7 +83,7 @@ link * cureatLink() {
     printf("%d-",link_6->val);
     
     link_7->val = 8;
-    link_7->next = link_0;
+    link_7->next = NULL;
     printf("%d-",link_7->val);
     
     printf("\n");
@@ -127,13 +127,51 @@ link * cureatLink1() {
     printf("%d-",link_5->val);
     
     link_6->val = 20;
-    link_6->next = link_0;
+    link_6->next = NULL;
     printf("%d-",link_6->val);
     
     printf("\n");
     
     return link_0;
 }
+
+
+
+
+//-----------------------------------------------------------------------
+//判断两个链表是否相交。（假设链表不带环）
+int _sListIsCrossNode(link* list1,link* list2) {
+    while (list1 && list1->next) {
+        list1 = list1->next;
+        list2 = list2->next;
+        if (list2 == list1 && list1 != NULL) {
+            return 1;
+        }
+    }
+    
+    return 0;
+    
+}
+
+
+
+void sListIsCrossNode(void) {
+    
+    int isCross = _sListIsCrossNode(cureatLink1(), cureatLink());
+    printf("\n");
+    printf("isCross %d",isCross);
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 //-----------------------------------------------------------------------
 //求环的入口点（环的入口点就是一个从链表开始另一个从相遇点开，当他们相交的点就是入口点）
@@ -142,11 +180,8 @@ link* _sListCrossEntreNode(link* list, link* meetNode) {
         list = list->next;
         meetNode = meetNode->next;
     }
-    
     return list;
 }
-
-
 
 void sListCrossEntreNode (void) {
     

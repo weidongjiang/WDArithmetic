@@ -37,7 +37,8 @@
 //    sListFindPop();
 //    sListIsCrcle();
 //    sListCycleLen();
-    sListCrossEntreNode();
+//    sListCrossEntreNode();
+    sListIsCrossNode();
     
     
 //    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];

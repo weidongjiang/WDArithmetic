@@ -40,4 +40,7 @@ void sListCycleLen(void);
 //求环的入口点（环的入口点就是一个从链表开始另一个从相遇点开，当他们相交的点就是入口点）
 void sListCrossEntreNode (void);
 
+//判断两个链表是否相交。（假设链表不带环）
+void sListIsCrossNode(void);
+
 #endif /* WDArithmeticLinklistManager_h */

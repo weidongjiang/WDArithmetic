@@ -29,7 +29,12 @@
 //    arrayCanJump();
     
 //    deleteLinkDuplication();
-    sListPrintTailToHead();
+//    sListPrintTailToHead();
+//    sListReverse();
+    slistMerge();
+    
+    
+    
 //    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
 //    [oc addLongString];
 }

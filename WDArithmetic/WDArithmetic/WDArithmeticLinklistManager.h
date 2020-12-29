@@ -25,5 +25,10 @@ void slistMerge(void);
 //查找单链表的中间节点，要求只能遍历一次链表 
 void sListFindMidNode(void);
 
+//查找单链表的倒数第k个节点，要求只能遍历一次链表
+void sListFindTailKNode(void);
+
+//删除链表的倒数第K个结点
+void sListFindPop(void);
 
 #endif /* WDArithmeticLinklistManager_h */

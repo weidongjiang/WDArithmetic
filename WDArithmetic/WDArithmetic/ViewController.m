@@ -32,8 +32,9 @@
 //    sListPrintTailToHead();
 //    sListReverse();
 //    slistMerge();
-    sListFindMidNode();
-    
+//    sListFindMidNode();
+//    sListFindTailKNode();
+    sListFindPop();
     
     
 //    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];

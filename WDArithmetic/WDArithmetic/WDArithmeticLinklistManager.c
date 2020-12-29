@@ -29,6 +29,7 @@ link* link_init() {
 }
 
 void printLink(link *node) {
+    printf("\n");
     while (node != NULL) {
         printf("%d-",node->val);
         node = node->next;
@@ -72,7 +73,7 @@ link * cureatLink() {
     printf("%d-",link_5->val);
     
     link_6->val = 7;
-    link_6->next = NULL;
+    link_6->next = link_7;
     printf("%d-",link_6->val);
     
     link_7->val = 8;
@@ -129,6 +130,101 @@ link * cureatLink1() {
 }
 
 
+
+
+
+
+
+
+//-----------------------------------------------------------------------
+//查找单链表的倒数第k个节点，要求只能遍历一次链表
+link * _sListFindTailKNode(link* list, size_t k) {
+    link *cur = NULL;
+    link *fast = NULL;
+    cur = fast = list;
+    while (k--) {
+        if (fast == NULL) {
+            return NULL;
+        }
+        
+        fast = fast->next;
+    }
+    while (fast) {
+        fast = fast->next;
+        cur = cur->next;
+        if (fast) {
+            printf("fast%d ",fast->val);
+        }
+        if (cur) {
+            printf("cur%d ",cur->val);
+        }
+    }
+    
+    return cur;
+}
+
+void sListFindTailKNode(void) {
+    link *node = _sListFindTailKNode(cureatLink(), 1);
+    printf("\n");
+    if (node) {
+        printf("%d",node->val);
+    }else {
+        printf("null");
+    }
+}
+
+
+
+
+//-----------------------------------------------------------------------
+//删除链表的倒数第K个结点
+link *_sListFindPop(link *list,size_t k) {
+    link *cur = NULL;
+    link *tail = list;
+    cur = _sListFindTailKNode(tail,k);// 找到
+    
+    while (tail->next != cur) {//
+        tail = tail->next;
+    }
+    tail->next = tail->next->next;
+    
+    return list;
+}
+
+void sListFindPop(void) {
+    link *node = _sListFindPop(cureatLink(),3);
+    printLink(node);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //-----------------------------------------------------------------------
 //查找单链表的中间节点，要求只能遍历一次链表
 //利用快慢指针 当快指针走到表尾部的时候 慢指针的当前位置就是中间节点
@@ -146,7 +242,7 @@ link* _sListFindMidNode(link *list) {
 }
 
 void sListFindMidNode(void) {
-    link *node = _sListFindMidNode(cureatLink());
+    link *node = _sListFindMidNode(cureatLink1());
     printf("\n");
     printf("%d",node->val);
 }

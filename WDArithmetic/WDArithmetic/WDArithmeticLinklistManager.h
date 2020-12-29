@@ -31,4 +31,7 @@ void sListFindTailKNode(void);
 //删除链表的倒数第K个结点
 void sListFindPop(void);
 
+//判断是否带环  快慢指针
+void sListIsCrcle(void);
+
 #endif /* WDArithmeticLinklistManager_h */

@@ -34,7 +34,8 @@
 //    slistMerge();
 //    sListFindMidNode();
 //    sListFindTailKNode();
-    sListFindPop();
+//    sListFindPop();
+    sListIsCrcle();
     
     
 //    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];

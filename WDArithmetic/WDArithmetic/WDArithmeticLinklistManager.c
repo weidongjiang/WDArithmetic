@@ -37,6 +37,7 @@ void printLink(link *node) {
 }
 
 link * cureatLink() {
+    link *link_0 = link_init();
     link *link_1 = link_init();
     link *link_2 = link_init();
     link *link_3 = link_init();
@@ -46,7 +47,6 @@ link * cureatLink() {
     link *link_7 = link_init();
 
     
-    link *link_0 = link_init();
     
     link_0->val = 1;
     link_0->next = link_1;
@@ -77,7 +77,7 @@ link * cureatLink() {
     printf("%d-",link_6->val);
     
     link_7->val = 8;
-    link_7->next = NULL;
+    link_7->next = link_0;
     printf("%d-",link_7->val);
     
     printf("\n");
@@ -131,6 +131,33 @@ link * cureatLink1() {
 
 
 
+//-----------------------------------------------------------------------
+//判断是否带环  快慢指针  多次循环，只要是带环的链表总有快慢指针相等的时候
+link *_sListIsCrcle(link *list) {
+    link *cur = NULL;
+    link *fast = NULL;
+    cur = fast = list;
+    while (fast && fast->next) {
+        cur = cur->next;
+        fast = fast->next->next;
+        if (cur == fast) {
+            return cur;
+        }
+    }
+    
+    return NULL;
+}
+
+
+void sListIsCrcle(void) {
+    link * node = _sListIsCrcle(cureatLink());
+    printf("\n");
+    if (node) {
+        printf("YES");
+    }else {
+        printf("NO");
+    }
+}
 
 
 
@@ -195,31 +222,6 @@ void sListFindPop(void) {
     link *node = _sListFindPop(cureatLink(),3);
     printLink(node);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

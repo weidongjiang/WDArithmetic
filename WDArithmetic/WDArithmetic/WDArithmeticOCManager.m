@@ -89,6 +89,7 @@
 - (void)testRange {
     
 //    （0,6）(2,7)
+//    (2,7) (0.6)
 //    (0,6) (10,3)
 //    (10,3) (0,6)
 //    (0,100) (3,10)
@@ -99,6 +100,9 @@
 
     NSRange newRange = [self getIntersectionRangeWithRange1:range1 range2:range2];
     NSLog(@"newRange--location:%lu----length:%lu",(unsigned long)newRange.location,(unsigned long)newRange.length);
+    NSRange range = NSIntersectionRange(range1, range2);
+    NSLog(@"NSIntersectionRange--location:%lu----length:%lu",(unsigned long)range.location,(unsigned long)range.length);
+
 }
 
 
@@ -136,10 +140,16 @@
         loc = range2_loc;
     }
     
-    if (range1_len >= range2_len) {
+    if (range1_len >= range2_len + range2_loc) {
+        len = range2_len + range2_loc - loc;
+    }else if (range2_len >= range1_len + range1_loc) {
+        len = range1_len + range1_loc - loc;
+    }else if (range1_len >= range2_len) {
         len = range2_len - loc;
-    }else {
+    }else if (range2_len >= range1_len) {
         len = range1_len - loc;
+    }else{
+        len = range1_len;
     }
     
     NSRange newRange = NSMakeRange(loc, len);

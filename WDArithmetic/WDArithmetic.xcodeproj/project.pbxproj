@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C551C76259D78B000D8A16B /* WDOCClang.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C551C75259D78B000D8A16B /* WDOCClang.m */; };
 		4C5618F62593318E0078C638 /* WDArithmeticOCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */; };
 		4C5619182595E90E0078C638 /* WDArithmeticLinklistManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C5619172595E90D0078C638 /* WDArithmeticLinklistManager.c */; };
 		4C5619202595EDBD0078C638 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C56191F2595EDBD0078C638 /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C551C74259D78B000D8A16B /* WDOCClang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDOCClang.h; sourceTree = "<group>"; };
+		4C551C75259D78B000D8A16B /* WDOCClang.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDOCClang.m; sourceTree = "<group>"; };
 		4C5618F42593318E0078C638 /* WDArithmeticOCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDArithmeticOCManager.h; sourceTree = "<group>"; };
 		4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDArithmeticOCManager.m; sourceTree = "<group>"; };
 		4C5619162595E90D0078C638 /* WDArithmeticLinklistManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDArithmeticLinklistManager.h; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				4C5DE22B2589FB03003D783B /* WDArithmeticManager.c */,
 				4C5618F42593318E0078C638 /* WDArithmeticOCManager.h */,
 				4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */,
+				4C551C74259D78B000D8A16B /* WDOCClang.h */,
+				4C551C75259D78B000D8A16B /* WDOCClang.m */,
 				4C5619162595E90D0078C638 /* WDArithmeticLinklistManager.h */,
 				4C5619172595E90D0078C638 /* WDArithmeticLinklistManager.c */,
 				4C5DE1FB2589FAC9003D783B /* Main.storyboard */,
@@ -281,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C551C76259D78B000D8A16B /* WDOCClang.m in Sources */,
 				4C5DE1F42589FAC8003D783B /* AppDelegate.m in Sources */,
 				4C5619202595EDBD0078C638 /* ViewController.m in Sources */,
 				4C5DE22C2589FB03003D783B /* WDArithmeticManager.c in Sources */,

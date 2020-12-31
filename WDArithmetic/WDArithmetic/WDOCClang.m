@@ -13,9 +13,10 @@
 @implementation WDOCClang
 
 //----------------------------------------------------
-//实现两个NSRange的交集 （0.6）（2，7）
+//实现两个NSRange的交集 （0，6）（2，7）
 - (NSRange)getIntersectionRangeWithRange1:(NSRange)range1 range2:(NSRange)range2 {
     NSRange newRange = NSIntersectionRange(range1, range2);
+
     return newRange;
 }
 

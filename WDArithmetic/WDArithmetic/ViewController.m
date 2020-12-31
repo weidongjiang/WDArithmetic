@@ -9,6 +9,7 @@
 #import "WDArithmeticManager.h"
 #import "WDArithmeticOCManager.h"
 #import "WDArithmeticLinklistManager.h"
+#import "WDOCClang.h"
 @interface ViewController ()
 
 @end
@@ -38,11 +39,15 @@
 //    sListIsCrcle();
 //    sListCycleLen();
 //    sListCrossEntreNode();
-    sListIsCrossNode();
+//    sListIsCrossNode();
     
     
-//    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
+    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
 //    [oc addLongString];
+    
+    
+
+    [oc testRange];
 }
 
 

@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 //两个很长的数字字符串，计算两个的和(数学加法可能会存在溢出的问题)
 - (void)addLongString;
 
+
+- (void)testRange;
+
 @end
 
 NS_ASSUME_NONNULL_END

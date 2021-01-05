@@ -44,11 +44,25 @@
     
     WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
 //    [oc addLongString];
+//    [oc testRange];
     
     
-
-    [oc testRange];
+    [self testperformSelector];
 }
+
+
+- (void)testperformSelector {
+    dispatch_async(dispatch_queue_create(0, 0), ^{
+        NSLog(@"1");
+        [self performSelector:@selector(test1) withObject:nil afterDelay:.0f];
+        [[NSRunLoop currentRunLoop] run];
+        NSLog(@"3");
+    });
+}
+- (void)test1 {
+    NSLog(@"2");
+}
+
 
 
 @end

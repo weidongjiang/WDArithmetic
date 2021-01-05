@@ -41,6 +41,7 @@ int isCanjump(int a[],int index,int aSize) {
     }
     
     int isC = isCanjump(a, m,aSize);
+    
     if (isC == 0) {// 走不通则走小于步数
         m--;
         printf("\n");

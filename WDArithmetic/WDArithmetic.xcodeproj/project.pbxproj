@@ -20,6 +20,7 @@
 		4C5DE20F2589FACC003D783B /* WDArithmeticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE20E2589FACC003D783B /* WDArithmeticTests.m */; };
 		4C5DE21A2589FACC003D783B /* WDArithmeticUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE2192589FACC003D783B /* WDArithmeticUITests.m */; };
 		4C5DE22C2589FB03003D783B /* WDArithmeticManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C5DE22B2589FB03003D783B /* WDArithmeticManager.c */; };
+		4C5E8B5825A46D2F006324CC /* WDDefer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E8B5725A46D2F006324CC /* WDDefer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		4C5DE21B2589FACC003D783B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C5DE22A2589FB03003D783B /* WDArithmeticManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDArithmeticManager.h; sourceTree = "<group>"; };
 		4C5DE22B2589FB03003D783B /* WDArithmeticManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = WDArithmeticManager.c; sourceTree = "<group>"; };
+		4C5E8B5625A46D2F006324CC /* WDDefer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDDefer.h; sourceTree = "<group>"; };
+		4C5E8B5725A46D2F006324CC /* WDDefer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDDefer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				4C5618F52593318E0078C638 /* WDArithmeticOCManager.m */,
 				4C551C74259D78B000D8A16B /* WDOCClang.h */,
 				4C551C75259D78B000D8A16B /* WDOCClang.m */,
+				4C5E8B5625A46D2F006324CC /* WDDefer.h */,
+				4C5E8B5725A46D2F006324CC /* WDDefer.m */,
 				4C5619162595E90D0078C638 /* WDArithmeticLinklistManager.h */,
 				4C5619172595E90D0078C638 /* WDArithmeticLinklistManager.c */,
 				4C5DE1FB2589FAC9003D783B /* Main.storyboard */,
@@ -293,6 +298,7 @@
 				4C5DE2052589FACB003D783B /* main.m in Sources */,
 				4C5618F62593318E0078C638 /* WDArithmeticOCManager.m in Sources */,
 				4C5619182595E90E0078C638 /* WDArithmeticLinklistManager.c in Sources */,
+				4C5E8B5825A46D2F006324CC /* WDDefer.m in Sources */,
 				4C5DE1F72589FAC8003D783B /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

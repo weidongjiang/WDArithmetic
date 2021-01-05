@@ -55,7 +55,8 @@
     dispatch_queue_t queue =  dispatch_queue_create(0, 0);
     dispatch_async(queue, ^{
         NSLog(@"1");
-        [self performSelector:@selector(test1) withObject:nil afterDelay:5.0f];
+        
+        [self performSelector:@selector(test1) withObject:nil afterDelay:5.0f inModes:@[NSRunLoopCommonModes]];
         [[NSRunLoop currentRunLoop] run];
         NSLog(@"3");
     });
@@ -64,6 +65,7 @@
     dispatch_async(queue, ^{
         NSLog(@"4");
     });
+    [self cleanUp];
 }
 - (void)test1 {
     NSLog(@"2");

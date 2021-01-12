@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)testRange;
 
+// 字符串里面出现的第一个不重复的字符 umu  gogole
+- (NSString *)getFirstC:(NSString *)string;
 @end
 
 NS_ASSUME_NONNULL_END

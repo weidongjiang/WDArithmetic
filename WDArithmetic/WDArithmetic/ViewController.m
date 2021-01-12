@@ -29,7 +29,7 @@
 //    canThreePartsEqualSum();
 //    arrayCanJump();
     
-    fNum(10);
+//    fNum(10);
 //    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
 
     
@@ -49,9 +49,9 @@
     WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
 //    [oc addLongString];
 //    [oc testRange];
-    
-    
-    [self testperformSelector];
+    NSString *c = [oc getFirstC:@"umummiklghyyi"];
+    NSLog(@"string---%@",c);
+//    [self testperformSelector];
 }
 
 

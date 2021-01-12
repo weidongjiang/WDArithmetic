@@ -69,7 +69,7 @@
     dispatch_async(queue, ^{
         NSLog(@"4");
     });
-    [self cleanUp];
+    
 }
 - (void)test1 {
     NSLog(@"2");

@@ -84,6 +84,7 @@
 }
 
 
+
 // 字符串里面出现的第一个不重复的字符 umu  gogole
 - (NSString *)getFirstC:(NSString *)string {
     
@@ -124,6 +125,79 @@
         }
     }
     return nil;
+}
+
+
+//----------------------------------------------------
+//实现两个NSRange的交集 （0，6）（2，7）
+- (void)testRange {
+    
+//    （0,6）(2,7)
+//    (2,7) (0.6)
+//    (0,6) (10,3)
+//    (10,3) (0,6)
+//    (0,100) (3,10)
+//    (4,9)(0,100)
+    
+    NSRange range1 = NSMakeRange(4, 9);
+    NSRange range2 = NSMakeRange(0, 100);
+
+    NSRange newRange = [self getIntersectionRangeWithRange1:range1 range2:range2];
+    NSLog(@"newRange--location:%lu----length:%lu",(unsigned long)newRange.location,(unsigned long)newRange.length);
+    NSRange range = NSIntersectionRange(range1, range2);
+    NSLog(@"NSIntersectionRange--location:%lu----length:%lu",(unsigned long)range.location,(unsigned long)range.length);
+
+}
+
+
+/// 两个range的交集 （0，0）表示没有交集
+/// @param range1 range1 description
+/// @param range2 range2 description
+- (NSRange)getIntersectionRangeWithRange1:(NSRange)range1 range2:(NSRange)range2 {
+    
+    NSInteger range1_loc = range1.location;
+    NSInteger range1_len = range1.length;
+    
+    NSInteger range2_loc = range2.location;
+    NSInteger range2_len = range2.length;
+    
+    if (!range1_len) {
+        return NSMakeRange(0, 0);
+    }
+    if (!range2_len) {
+        return NSMakeRange(0, 0);
+    }
+    
+    
+    if (range1_loc + range1_len < range2_loc) {
+        return NSMakeRange(0, 0);
+    }
+    if (range2_loc + range2_len < range1_loc) {
+        return NSMakeRange(0, 0);
+    }
+    
+    NSInteger loc = 0;
+    NSInteger len = 0;
+    if (range1_loc >= range2_loc) {
+        loc = range1_loc;
+    }else {
+        loc = range2_loc;
+    }
+    
+    if (range1_len >= range2_len + range2_loc) {
+        len = range2_len + range2_loc - loc;
+    }else if (range2_len >= range1_len + range1_loc) {
+        len = range1_len + range1_loc - loc;
+    }else if (range1_len >= range2_len) {
+        len = range2_len - loc;
+    }else if (range2_len >= range1_len) {
+        len = range1_len - loc;
+    }else{
+        len = range1_len;
+    }
+    
+    NSRange newRange = NSMakeRange(loc, len);
+    return newRange;
 }
 
 @end

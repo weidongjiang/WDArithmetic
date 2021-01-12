@@ -26,4 +26,6 @@ void canThreePartsEqualSum (void);
 
 void arrayCanJump(void);
 
+void fNum (int n);
+
 #endif /* WDArithmeticManager_h */

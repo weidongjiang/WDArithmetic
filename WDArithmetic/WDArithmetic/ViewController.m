@@ -26,9 +26,9 @@
 //    maxHeapifySort();
 //    updateArray();
 //    canThreePartsEqualSum();
-    arrayCanJump();
+//    arrayCanJump();
     
-    
+    fNum(10);
 //    WDArithmeticOCManager *oc = [[WDArithmeticOCManager alloc] init];
 //    [oc addLongString];
 }

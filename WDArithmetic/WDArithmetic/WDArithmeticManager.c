@@ -8,8 +8,27 @@
 #include "WDArithmeticManager.h"
 
 
-
-
+//-----------------------------------------------------------------------
+// fn = fn-1 + fn-2;
+void fNum (int n) {
+    
+    int f0 = 0;
+    int f1 = 1;
+    int f2 = 1;
+    
+    for (int i = 0; i < n; i++) {
+        f2 = f0 + f1;
+        printf("\n");
+        printf("%d",f2);
+        f0 = f1;
+        f1 = f2;
+    }
+    
+    printf("\n");
+    printf("--------");
+    printf("\n");
+    printf("%d",f2);
+}
 
 
 

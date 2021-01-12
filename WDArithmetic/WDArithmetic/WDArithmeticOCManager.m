@@ -83,4 +83,47 @@
     return string;
 }
 
+
+// 字符串里面出现的第一个不重复的字符 umu  gogole
+- (NSString *)getFirstC:(NSString *)string {
+    
+    NSMutableString *s = [NSMutableString stringWithString:string];
+    NSMutableArray *array = [NSMutableArray array];
+     
+    for (int i = 0; i < s.length; i++) {
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        NSString *c = [s substringWithRange:NSMakeRange(i, 1)];
+        NSDictionary *c_dict = [self getIsHave:c array:array index:i];
+        if (!c_dict) {
+            [dict setValue:@(1) forKey:c];
+            [array addObject:dict];
+        }
+    }
+    
+    for (int i = 0; i < array.count; i++) {
+        NSDictionary *_dict = [array objectAtIndex:i];
+        NSNumber *value = [_dict objectForKey:_dict.allKeys.firstObject];
+        if (value.intValue == 1) {
+            return _dict.allKeys.firstObject;
+        }
+    }
+    return nil;
+}
+
+
+- (NSDictionary *)getIsHave:(NSString *)str array:(NSArray *)array index:(int)index{
+    
+    for (int i = 0; i< array.count; i++) {
+        NSMutableDictionary *_dict = [array objectAtIndex:i];
+        NSNumber *value = [_dict objectForKey:str];
+        NSString *key = _dict.allKeys.firstObject;
+        if ([key isEqualToString:str]) {
+            int _value = value.intValue + 1;
+            [_dict setValue:@(_value) forKey:str];
+            return _dict;
+        }
+    }
+    return nil;
+}
+
 @end
